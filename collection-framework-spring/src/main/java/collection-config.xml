@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	https://www.springframework.org/schema/context/spring-context.xsd">
+	<context:component-scan
+		base-package="org.springframework.samples.petclinic.web" />
+
+	<bean class="com.spring_core.collection_framework_spring.Employee" name="emp1">
+		<property name="name" value= "Radhe"/>
+		
+		<property name="phones">
+			<list>
+				<value>5522</value>
+				<value>5544</value>
+				<value>5533</value>
+			</list>
+		</property>
+		
+		<property name="addresses">
+			<set>
+				<value>Delhi</value>
+				<value>Lakhnow</value>
+				<value>Pune</value>
+			</set>
+		</property>
+		
+		<property name="courses">
+			<map>
+				<entry key="Java" value="2month"/>
+				<entry key="Python" value="1.5 month"/>
+				<entry key="C++" value="1month"/>
+			</map>
+		
+		</property>
+		
+		<property name="props">
+			<props>
+				<prop key="name">Attish</prop>
+				<prop key="lastName">Gawali</prop>
+			</props>
+		
+		</property>
+	
+	</bean>
+
+	
+</beans>
