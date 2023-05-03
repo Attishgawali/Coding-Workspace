@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	https://www.springframework.org/schema/context/spring-context.xsd">
+	<context:component-scan
+		base-package="org.springframework.samples.petclinic.web" />
+
+	<bean class="com.spring_core.constructor_injection_spring.Address"
+		name="address" c:city="Sinnar" c:streetNo="220" />
+
+	<bean class="com.spring_core.constructor_injection_spring.Person"
+		name="person" c:name="tejas" c:personId="330" c:ob-ref="address"
+		c:phones="422,55,431" />
+	<!-- <property name="phones"> <list> <value>10</value> <value>11</value> 
+		<value>12</value> </list> </property> </bean> -->
+
+
+
+
+</beans>
